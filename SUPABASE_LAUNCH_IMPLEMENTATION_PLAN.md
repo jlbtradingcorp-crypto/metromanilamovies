@@ -22,6 +22,7 @@ Yes. Metro Manila Movies can connect to a different Supabase account or, prefera
 - Browse movie listings, cinema locations, dates, and showtimes.
 - Search and filter published movies.
 - View public editorial details such as synopsis, age rating, poster, trailer link, and release date.
+- Offer a contact form and a clear WhatsApp contact option for business inquiries.
 
 ### Staff workspace
 
@@ -34,7 +35,7 @@ Yes. Metro Manila Movies can connect to a different Supabase account or, prefera
 ### Not included until a later phase
 
 - Ticket sales or payments.
-- Public user accounts, unless there is a clear feature that needs them.
+- Public user accounts and public submissions. Visitors will contact the team through the approved contact channels instead.
 - Automated scraping of cinema sites without permission.
 - Public file uploads.
 
@@ -114,13 +115,21 @@ The current Metro Manila Movies project includes a starter Cloudflare D1 placeho
 
 ## Information needed from the client before build begins
 
-1. The new Supabase project URL and **publishable** key only; share the service-role key through a secure deployment-secret process, never chat.
-2. Names and emails of the initial administrators and editors.
-3. The fields that must appear in each movie and showtime listing.
-4. The official sources and update frequency for showtimes.
-5. The desired moderation process for public submissions, if enabled.
-6. Branding assets and the allowed poster/image source policy.
-7. Whether the site needs a custom domain at launch.
+1. **Supabase connection confirmed**
+   - Project URL: `https://kegvufvjlcwidlafhsem.supabase.co`
+   - Publishable key: retrieve from Supabase Dashboard → Project Settings → API Keys → Publishable key, then add it only to the secure deployment environment.
+   - The secret key must remain server-only and must never be committed to GitHub or sent in chat.
+2. **Initial administrators confirmed**
+   - `jlbtradingcorp@gmail.com`
+   - `jairadavid128@gmail.com`
+3. **Listing fields confirmed**: use the movie and showtime fields already present in the approved site draft.
+4. **Showtime sources confirmed**: use official cinema/mall sources for Metro Manila, including SM Cinema, Ayala Malls Cinemas, The Podium, Estancia, Rockwell, Cash & Carry, and other official major-mall cinema pages. Each showtime record must include a “last verified” timestamp.
+5. **Contact workflow confirmed**
+   - Business WhatsApp: `+63 994 085 1047`
+   - Contact form recipient: `jairadavid128@gmail.com`
+   - Public submissions and automatic public posting are out of scope for launch.
+6. **Branding and poster policy confirmed**: use the approved current site draft and its existing visual direction.
+7. **Custom domain confirmed**: yes. Before launch, provide the chosen domain name and access to its DNS settings so the live site and Supabase Auth redirect URLs can be configured.
 
 ## Launch acceptance checklist
 
